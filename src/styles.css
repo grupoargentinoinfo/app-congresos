@@ -1,0 +1,96 @@
+/* You can add global styles to this file, and also import other style files */
+body
+{
+	font-size: 13px;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url(assets/fonts/Lato-Bold.ttf);
+}
+
+.tabs-agenda
+{
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.tabs-agenda ul.nav 
+{
+    background-color: #E2AC0F;
+    padding: 0 2em;
+    border-bottom: 3px solid #000;
+    border-radius: 0 !important;
+}
+
+.nav-tabs>li {
+    float: left;
+    margin-bottom: 0px !important;
+}
+
+.tabs-agenda ul.nav  li
+{
+    bottom: -3px;
+    position: relative;
+}
+
+.tabs-agenda ul.nav  li a
+{
+    color: #000;
+}
+
+.tabs-agenda ul.nav  li a
+{
+    background: transparent !important;
+    border: 0;
+    border-bottom: 3px solid #000;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    color: #FFF;
+    text-shadow: none;
+}
+
+.tabs-agenda ul.nav  li .active,
+.tabs-agenda ul.nav  li .active:focus
+{
+    background: transparent !important;
+    border-bottom-color: #FFF !important;
+    color: #fff !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.listadoTemas
+{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.listadoTemas h2
+{
+    font-size: 1.5em;
+}
+
+.listadoTemas li.tema
+{
+    border-bottom: 2px solid #E8E8E8;
+}
+
+.listadoTemas ul
+{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.item.charla
+{
+    padding: 0.5em 1em;
+    border-bottom: 2px solid #E2AC0F;
+    font-size: 0.8em;
+}
+
+.navbar{
+    margin-bottom: 0px;
+  }

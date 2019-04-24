@@ -1,0 +1,97 @@
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+
+.headPantalla {
+    text-align: center;
+    color: white;
+    background-color: #E2AC0F;
+    padding: 0.5em;
+    -moz-box-shadow: inset -5px -5px 5px black;
+    -webkit-box-shadow: inset 0px -5px 5px black;
+    box-shadow: inset 0px -2px 5px black;
+    margin-bottom: -1px;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+  }
+
+.favoritos{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.horario{
+  text-align: center;
+  height: 100%;
+  right: -2%;
+  align-items: center;
+}
+
+.espOradores {
+    margin-top: 7px;
+    font-weight: bold;
+}
+
+.alignAula {
+    text-align: right;
+}
+
+.listadoTemas
+{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.listadoTemas h2
+{
+    font-size: 1.5em;
+}
+
+@media only screen and (max-width: 500px) {
+    .listadoTemas h2 {
+        font-size: 1.3em;
+    }
+}
+
+.listadoTemas li.tema
+{
+    border-bottom: 2px solid #E8E8E8;
+}
+
+.listadoTemas ul
+{
+    padding: 1;
+    margin: 0px;
+    list-style: none;
+}
+
+input, select {
+    width:100%;
+}
+
+#buscador{
+    padding: 5px
+}
+
+body { margin: 30px; }
+.search {
+  position: relative;
+  color: #aaa;
+  font-size: 16px;
+}
+
+.search input {
+  width:100%;
+
+  /* background: #fcfcfc;
+  border: 1px solid #aaa; */
+  border-radius: 5px;
+  box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
+}
+
+.search input { text-indent: 32px;}
+.search .fa-search { 
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}

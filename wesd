@@ -1,0 +1,136 @@
+[33mcommit ac4b3feba7a5ca9344d2b3acb6ef5cd44493b0f9[m
+Author: mcasella92 <mariana.casella92@gmail.com>
+Date:   Fri Mar 9 20:10:33 2018 -0300
+
+    - README.md nuevo y explicado!
+    - API Service. Se usará para compartir variables entre componentes.
+
+[33mcommit 18d575c3a74548efe8f6515b99cd86003a6d6636[m
+Author: mcasella92 <mariana.casella92@gmail.com>
+Date:   Fri Mar 9 08:09:20 2018 -0300
+
+    - Diseño del programa
+    - Nuevas clases: Temas + Charlas
+
+[33mcommit b5b085577d36b0268c12228e5614f52c9c1a8f1b[m
+Author: mcasella92 <mariana.casella92@gmail.com>
+Date:   Fri Mar 9 07:34:23 2018 -0300
+
+    - Corrección del error ng-bootstrap. Cambiado a versión 1.0.0.6 beta
+
+[33mcommit 2158fc27839f151288db4ef423964fb313b20b8f[m
+Merge: 43e7059 b1b8f12
+Author: mcasella92 <mariana.casella92@gmail.com>
+Date:   Thu Mar 8 23:18:14 2018 -0300
+
+    Merge branch 'master' of https://bitbucket.org/desarrollogai/aplicacion
+    
+    # Conflicts:
+    #	www/IndexOpciones.html
+    #	www/css/index.css
+
+[33mcommit 43e7059e65e5e875a8711fb2b36ef598cb3ffccd[m
+Author: mcasella92 <mariana.casella92@gmail.com>
+Date:   Thu Mar 8 23:16:10 2018 -0300
+
+    - Proyecto base con AngularJS + Cordova
+
+[33mcommit b1b8f12451a3a80601c396d7e70c4f18e6a59ab1[m
+Author: Gaby-PC\Gaby <gabrielcarlassare@gmail.com>
+Date:   Thu Mar 8 20:17:26 2018 -0300
+
+    Index listo
+
+[33mcommit be8a5b48f0aecd8aa357f53d3c25c21f42dd4923[m
+Author: Silvina <silvina609@gmail.com>
+Date:   Thu Mar 8 13:44:15 2018 -0300
+
+    Estilos Agenda
+
+[33mcommit 972d0c159def0fba5d6b53d6ba3b9f3708a8d082[m
+Author: Silvina <silvina609@gmail.com>
+Date:   Thu Mar 8 13:24:45 2018 -0300
+
+    Signed-off-by: Silvina <silvina609@gmail.com>
+
+[33mcommit dff03544a818487e421bb9a985b54f2e9f89aac6[m
+Author: Silvina <silvina609@gmail.com>
+Date:   Thu Mar 8 11:53:17 2018 -0300
+
+    Index Agenda
+
+[33mcommit bd1cb9d279a7d481d6068e78d422e61b8272ceb8[m
+Author: Silvina <silvina609@gmail.com>
+Date:   Thu Mar 8 11:43:31 2018 -0300
+
+    Agrego imagenes para la agenda
+
+[33mcommit b3ab13f60c1a1feae0a2d5d965654a1183008890[m
+Author: Gaby-PC\Gaby <gabrielcarlassare@gmail.com>
+Date:   Thu Mar 8 00:21:31 2018 -0300
+
+    Index a terminar
+
+[33mcommit 15c127d4a2c1c73a4da98603b18d7fa238f21296[m
+Author: mcasella92 <mariana.casella92@gmail.com>
+Date:   Tue Mar 6 23:03:58 2018 -0300
+
+    - Inicio de cero la aplicación/diseño.
+       - Fontawesome última versión
+       - Maquetado más prolijo con grid de jQuery Mobile
+       - Pantallas básicas con el menú principal y 2 pantallas más (Informácion general y Agenda)
+
+[33mcommit c24d20aafb6cc461ae5c0ab67f5207324d5406e3[m
+Author: mcasella92 <mariana.casella92@gmail.com>
+Date:   Tue Mar 6 20:53:09 2018 -0300
+
+    - Preparación básica de la Agenda con Tabs y algunos estilos en app.css
+    - Se comentó todo lo de PUSHNOTIFICATION para que no tire más error y cargue el listado de las charlas desde la base de datos de CACIDI 2016.
+
+[33mcommit b2ffff62a8bfc11aab16acd47ab9561f61b185bb[m
+Author: mcasella92 <mariana.casella92@gmail.com>
+Date:   Tue Mar 6 19:28:32 2018 -0300
+
+    prueba-mariana.txt
+
+[33mcommit 2dc5ed83b792d36e93ada1739106bcfa836a74cb[m
+Author: Silvina <silvina609@gmail.com>
+Date:   Tue Mar 6 19:22:17 2018 -0300
+
+    Prueba
+
+[33mcommit d8645161f093fd63ca0e907598890500ea18760f[m
+Author: Silvina <silvina609@gmail.com>
+Date:   Tue Mar 6 19:19:59 2018 -0300
+
+    Prueba 2 de Silvina
+
+[33mcommit 6fb346a11dac824532b105a30aa90bf05e652804[m
+Author: Silvina <silvina609@gmail.com>
+Date:   Tue Mar 6 19:17:38 2018 -0300
+
+    Prueba de Silvina
+
+[33mcommit 35a3d31626ec5b779ba4615cf3b5b69f8987bd99[m
+Author: JD <leonelgalizzi@gmail.com>
+Date:   Tue Jan 30 22:39:07 2018 -0300
+
+    pruebaLeon
+
+[33mcommit d6ba5e8e5feb4cd10c765945e020d4d1a8230371[m
+Author: mcasella92 <mariana.casella92@gmail.com>
+Date:   Fri Jan 26 12:43:55 2018 -0300
+
+    - Archivo de configuración para PHONEGAP config.xml
+
+[33mcommit 0c942a1e4994a1b75cf9006c6abdcf4b439ed4c6[m
+Author: mcasella92 <mariana.casella92@gmail.com>
+Date:   Fri Jan 26 12:20:41 2018 -0300
+
+    - Proyecto base desde CACIDI
+
+[33mcommit dae9f9235d31d0b481364155108165446423a483[m
+Author: grupoargentinoinfo <grupoargentinoinfo@gmail.com>
+Date:   Tue Oct 24 19:40:24 2017 +0000
+
+    README.md created online with Bitbucket

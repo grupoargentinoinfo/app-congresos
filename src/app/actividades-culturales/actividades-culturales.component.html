@@ -1,0 +1,31 @@
+<div class="pantallaBlanca">
+  <div class="headPantalla col-xs-12">
+    <div style="text-align: center;">Programa de actividades culturales</div>
+  </div>
+      <div>
+      <!-- <p> hay q hacer el espacio con css</p> -->
+    </div> 
+          <div class="listadoActividades" *ngIf="!charlaSeleccionada">
+            <li *ngFor="let actividad of actividadesCulturales" class="item tema row favoritos">
+              <div class="col-xs-8" (click)="charlaSeleccionada = actividad" style="right: -15px">
+                <div class="espacioActividades">{{actividad.tituloCharla}}</div>
+                <div>{{actividad.lugar}}</div>
+              </div>
+              <div class="horario col-xs-4" (click)="toggleAgendar(actividad)">
+                <span>{{actividad.horaCharla | date:'H:mm'}}hs</span>
+                <span>
+                  <i [ngClass]="iconoFavorito(actividad) ? 'fas fa-star' : 'far fa-star'" style="color: #E2AC0F;"></i>
+                </span>
+              </div>
+            </li>
+          </div>
+</div>
+<!-- <pre>{{actividadesCulturales | json}}</pre> -->
+<!-- Charla seleccionada -->
+<div *ngIf="charlaSeleccionada">
+  <button (click)="charlaSeleccionada = null">
+    <- Volver</button>
+      <h2>{{charlaSeleccionada.tituloCharla}}</h2>
+      <span>{{charlaSeleccionada.horaCharla | date:'H:mm'}} hs</span>
+      <p>{{charlaSeleccionada.lugar}}</p>
+</div>

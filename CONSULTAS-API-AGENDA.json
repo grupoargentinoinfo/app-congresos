@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "0bdd3dc3-25f4-45b9-b8fe-0a69303bfbc6",
+		"name": "XVI SAEL",
+		"description": "API Server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Localhost",
+			"description": null,
+			"item": [
+				{
+					"name": "GET ALL todas las charlas de un token real",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://grupoargentinoinfo.xvi-sael-api-server.local/api.php/agenda/usuario/fAL-rG-Ujcc:APA91bGdtMkbqJagBOVWrRWUModmsN57cjTBb0kBJSCMkB92EJnrP4ohIh2R1HWCDn3oPJtUuM6cAvkYPBQXPk3mhykwhdbH1GkPJJp_J7u4dEFbqSXtgdFEqZoHkzQlcuatHGqhlFl2",
+							"protocol": "http",
+							"host": [
+								"grupoargentinoinfo",
+								"xvi-sael-api-server",
+								"local"
+							],
+							"path": [
+								"api.php",
+								"agenda",
+								"usuario",
+								"fAL-rG-Ujcc:APA91bGdtMkbqJagBOVWrRWUModmsN57cjTBb0kBJSCMkB92EJnrP4ohIh2R1HWCDn3oPJtUuM6cAvkYPBQXPk3mhykwhdbH1GkPJJp_J7u4dEFbqSXtgdFEqZoHkzQlcuatHGqhlFl2"
+							]
+						},
+						"description": "Localhost"
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar charla a un token real",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "idtoken",
+									"value": "",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://grupoargentinoinfo.xvi-sael-api-server.local/api.php/charla/1/usuario/fAL-rG-Ujcc:APA91bGdtMkbqJagBOVWrRWUModmsN57cjTBb0kBJSCMkB92EJnrP4ohIh2R1HWCDn3oPJtUuM6cAvkYPBQXPk3mhykwhdbH1GkPJJp_J7u4dEFbqSXtgdFEqZoHkzQlcuatHGqhlFl2",
+							"protocol": "http",
+							"host": [
+								"grupoargentinoinfo",
+								"xvi-sael-api-server",
+								"local"
+							],
+							"path": [
+								"api.php",
+								"charla",
+								"1",
+								"usuario",
+								"fAL-rG-Ujcc:APA91bGdtMkbqJagBOVWrRWUModmsN57cjTBb0kBJSCMkB92EJnrP4ohIh2R1HWCDn3oPJtUuM6cAvkYPBQXPk3mhykwhdbH1GkPJJp_J7u4dEFbqSXtgdFEqZoHkzQlcuatHGqhlFl2"
+							]
+						},
+						"description": "Add charla a un token (device)"
+					},
+					"response": []
+				},
+				{
+					"name": "DETELE charla de la agenda pasando un token real",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://grupoargentinoinfo.xvi-sael-api-server.local/api.php/charla/4/usuario/fAL-rG-Ujcc:APA91bGdtMkbqJagBOVWrRWUModmsN57cjTBb0kBJSCMkB92EJnrP4ohIh2R1HWCDn3oPJtUuM6cAvkYPBQXPk3mhykwhdbH1GkPJJp_J7u4dEFbqSXtgdFEqZoHkzQlcuatHGqhlFl2",
+							"protocol": "http",
+							"host": [
+								"grupoargentinoinfo",
+								"xvi-sael-api-server",
+								"local"
+							],
+							"path": [
+								"api.php",
+								"charla",
+								"4",
+								"usuario",
+								"fAL-rG-Ujcc:APA91bGdtMkbqJagBOVWrRWUModmsN57cjTBb0kBJSCMkB92EJnrP4ohIh2R1HWCDn3oPJtUuM6cAvkYPBQXPk3mhykwhdbH1GkPJJp_J7u4dEFbqSXtgdFEqZoHkzQlcuatHGqhlFl2"
+							]
+						},
+						"description": "DETELE charla de la agenda pasando un token real"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Prod",
+			"description": "",
+			"item": [
+				{
+					"name": "PROD - Agregar charla con token real",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://grupoargentinoinformatico.com/xvi-sael-celes/api.php/charla/27/usuario/fAL-rG-Ujcc:APA91bGdtMkbqJagBOVWrRWUModmsN57cjTBb0kBJSCMkB92EJnrP4ohIh2R1HWCDn3oPJtUuM6cAvkYPBQXPk3mhykwhdbH1GkPJJp_J7u4dEFbqSXtgdFEqZoHkzQlcuatHGqhlFl2",
+							"protocol": "http",
+							"host": [
+								"grupoargentinoinformatico",
+								"com"
+							],
+							"path": [
+								"xvi-sael-celes",
+								"api.php",
+								"charla",
+								"27",
+								"usuario",
+								"fAL-rG-Ujcc:APA91bGdtMkbqJagBOVWrRWUModmsN57cjTBb0kBJSCMkB92EJnrP4ohIh2R1HWCDn3oPJtUuM6cAvkYPBQXPk3mhykwhdbH1GkPJJp_J7u4dEFbqSXtgdFEqZoHkzQlcuatHGqhlFl2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nuevo usuario device",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://grupoargentinoinformatico.com/xvi-sael-celes/api.php/usuario/fAL-rG-Ujcc:APA91bGdtMkbqJagBOVWrRWUModmsN57cjTBb0kBJSCMkB92EJnrP4ohIh2R1HWCDn3oPJtUuM6cAvkYPBQXPk3mhykwhdbH1GkPJJp_J7u4dEFbqSXtgdFEqZoHkzQlcuatHGqhlFl2",
+							"protocol": "http",
+							"host": [
+								"grupoargentinoinformatico",
+								"com"
+							],
+							"path": [
+								"xvi-sael-celes",
+								"api.php",
+								"usuario",
+								"fAL-rG-Ujcc:APA91bGdtMkbqJagBOVWrRWUModmsN57cjTBb0kBJSCMkB92EJnrP4ohIh2R1HWCDn3oPJtUuM6cAvkYPBQXPk3mhykwhdbH1GkPJJp_J7u4dEFbqSXtgdFEqZoHkzQlcuatHGqhlFl2"
+							]
+						},
+						"description": "Con token"
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL todas las charlas de un token real",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://grupoargentinoinformatico.com/xvi-sael-celes/api.php/agenda/usuario/fAL-rG-Ujcc:APA91bGdtMkbqJagBOVWrRWUModmsN57cjTBb0kBJSCMkB92EJnrP4ohIh2R1HWCDn3oPJtUuM6cAvkYPBQXPk3mhykwhdbH1GkPJJp_J7u4dEFbqSXtgdFEqZoHkzQlcuatHGqhlFl2",
+							"protocol": "http",
+							"host": [
+								"grupoargentinoinformatico",
+								"com"
+							],
+							"path": [
+								"xvi-sael-celes",
+								"api.php",
+								"agenda",
+								"usuario",
+								"fAL-rG-Ujcc:APA91bGdtMkbqJagBOVWrRWUModmsN57cjTBb0kBJSCMkB92EJnrP4ohIh2R1HWCDn3oPJtUuM6cAvkYPBQXPk3mhykwhdbH1GkPJJp_J7u4dEFbqSXtgdFEqZoHkzQlcuatHGqhlFl2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DETELE charla de la agenda pasando un token real",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://grupoargentinoinformatico.com/xvi-sael-celes/api.php/charla/4/usuario/fAL-rG-Ujcc:APA91bGdtMkbqJagBOVWrRWUModmsN57cjTBb0kBJSCMkB92EJnrP4ohIh2R1HWCDn3oPJtUuM6cAvkYPBQXPk3mhykwhdbH1GkPJJp_J7u4dEFbqSXtgdFEqZoHkzQlcuatHGqhlFl2",
+							"protocol": "http",
+							"host": [
+								"grupoargentinoinformatico",
+								"com"
+							],
+							"path": [
+								"xvi-sael-celes",
+								"api.php",
+								"charla",
+								"4",
+								"usuario",
+								"fAL-rG-Ujcc:APA91bGdtMkbqJagBOVWrRWUModmsN57cjTBb0kBJSCMkB92EJnrP4ohIh2R1HWCDn3oPJtUuM6cAvkYPBQXPk3mhykwhdbH1GkPJJp_J7u4dEFbqSXtgdFEqZoHkzQlcuatHGqhlFl2"
+							]
+						},
+						"description": "DETELE charla de la agenda pasando un token real"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

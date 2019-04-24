@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "530128839245",
+    "firebase_url": "https://celes-2018.firebaseio.com",
+    "project_id": "celes-2018",
+    "storage_bucket": "celes-2018.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:530128839245:android:95b3c94a87ad5b1f",
+        "android_client_info": {
+          "package_name": "com.grupoargentinoinformatico.xvisael"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "530128839245-4dsaemq878kt88j9rasnfv51v7p06b25.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmw3HYgdIhlCXajLe0R64wpKpxWxGj5YI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

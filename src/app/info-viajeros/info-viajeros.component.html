@@ -1,0 +1,597 @@
+    <div class="headPantalla col-xs-12">
+      <div style="text-align: center;">Cómo llegar</div>
+    </div>
+
+    <div class="grid9"> 
+      <div id="contenido" style="border-left: 1px solid #2C88CD" class="color_oficial">
+        
+        <div *ngIf="mostrarInfoViajeros">
+           <!-- InstanceBeginEditable name="contenido" -->
+
+            <div class="grid10">
+              <h1>Campus Miguelete</h1>
+            </div>
+
+            <div class="grid2">
+              <div style="padding:6px; border: 1px solid #004e7d; border-radius: 10px; background-color:#EEEEEE; text-align:center;">
+                <a  onclick="window.open('http://www.unsam.edu.ar/home/llamadas-urgencia.asp', '_system');">CUIDADOS
+                  <br /> EN EL CAMPUS</a>
+              </div>
+            </div>
+
+            <div class="grid12">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2322.820074559078!2d-58.52283759626938!3d-34.57978624801553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x84b4e591f54ec061!2sUniversidad+Nacional+de+San+Mart%C3%ADn+(UNSAM)!5e0!3m2!1ses!2sar!4v1463684673653"
+                width="100%" height="320" frameborder="0" style="border:0"></iframe>
+              <br />
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="grid12">
+              <div style="background-color:#EEE; padding:5px; border-top: #DdD thin solid; border-bottom:#DDD thin solid; border-left:#DDD thin solid">
+                <strong>Campus Miguelete, </strong>
+                <br /> Direcci&oacute;n: 25 de Mayo 1300, San Martin, Buenos Aires.
+                <br /> Tel&eacute;fonos: 2033-1400 (Informes)
+                <br />
+                <!-- <a href="http://www.unsam.edu.ar/home/contacto.asp">Ver otros contactos por &aacute;rea</a> -->
+                <br />
+
+
+                <div style="background-color:#EEE; padding:0px 5px 5px 5px; border-top: #DdD thin solid; border-bottom:#DDD thin solid; border-left:#DDD thin solid">
+                  <strong>Tren:
+                    <br />
+                  </strong> L&iacute;nea Mitre (Ramal Jos&eacute; Le&oacute;n Suarez)
+                  <br /> Estaci&oacute;n San Mart&iacute;n o estaci&oacute;n Miguelete
+                  <br />
+                  <strong>Colectivos:
+                    <br />
+                  </strong> 21, 28, 57, 78, 87, 106, 117, 123, 161, 169, 176
+                </div>
+
+                <br />
+
+
+                <div style="background-color:#EEE; padding:0px 5px 5px 5px; border-top: #DdD thin solid; border-bottom:#DDD thin solid; border-left:#DDD thin solid">
+                  <strong>En auto:
+                    <br />
+                  </strong> Desde zona norte:
+                  <br /> Av. General Paz. Bajada est. Miguelete - INTI, seguir por colectora hasta 25 de Mayo, doblar a la derecha hasta
+                  Francia.
+                  <br /> Desde zona Sur:
+                  <br /> Av. General Paz. Bajada San Mart&iacute;n, seguir por colectora y tomar el puente que cruza a la Av. 25 de Mayo.
+                  Continuar hasta Francia.
+                </div>
+
+                </div>
+
+                <div class="clear"></div>
+
+                <!-- <img [src]="./img/mapCampus.gif" alt="" width="370" height="347" border="1"> <br /> -->
+                <br />
+                <div style="padding:0px 5px 5px 5px;">
+                <h1>PLANO DEL CAMPUS</h1>
+                <p>
+                  <a>
+                    <img src="./assets/img/mapa_Campus.gif" width="1050" height="411"/>
+                  </a>
+                </p>
+
+                <p>&nbsp;</p>
+                <h1>Colectivo gratis</h1>
+                La Universidad ofrece un servicio gratuito de transporte que conecta desde la ma&ntilde;ana hasta la noche al Campus Miguelete
+                con las estaciones Miguelete y San Mart&iacute;n del ferrocarril Mitre, la Escuela de Econom&iacute;a y Negocios y
+                otras sedes locales de la Universidad.
+                <br>
+                <button (click)="mostrarInfoViajeros = false; mostrarColectivoHorario = true "> Horarios y paradas</button> 
+                <p>&nbsp; </p>
+                <h1>Minitren gratis</h1>
+
+                Pasa de lunes a viernes por tres estaciones: Migueletes, próxima a la del tren Mitre; Sociales y Tornavía.
+                <br /> La frecuencia es de 16 veces por día, aproximadamente dos veces por hora, con un receso entre las 13 y las 16.
+                <br /> La salida desde Miguelete suele ser después de que llega la formación más próxima del tren Mitre, por lo que su horario
+                es más flexible.
+                <br>
+                <button (click)="mostrarInfoViajeros = false; mostrarTrenHorario = true "> Horarios y paradas</button> 
+                <p>&nbsp;</p>
+          </div>
+              </div>
+           </div>
+          <div *ngIf="mostrarColectivoHorario ==true ">
+            <button (click)="mostrarColectivoHorario = false; mostrarInfoViajeros = true ">
+              <- Volver</button>
+              <table width="100%" border="0" cellpadding="5" cellspacing="2" style="font-size: 10px">
+              <colgroup><col width="66" span="9"> </colgroup><tbody><tr>
+              <td colspan="10" align="left"><h1><strong>HORARIOS</strong></h1>
+                   <strong>Lunes a viernes</strong></td>
+              </tr>
+         
+              <tr>
+                <td colspan="10"><h1>TURNO MAÑANA</h1></td>
+              </tr>
+              <tr>
+                <th width="11%" align="center" bgcolor="#DFDFDF">SALIDA </th>
+                <th width="10%" align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th width="10%" align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th width="9%" align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th width="11%" align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th width="10%" align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th width="9%" align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th width="10%" align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th width="9%" align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th width="11%" align="center" bgcolor="#DFDFDF">LLEGADA</th>
+              </tr>
+              <tr>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>UNSAM    Tornavía</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong> Sociales<br>
+                  M.         Asunta</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>Estación    Miguelete</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>Parque Yrigoyen</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>UNSAM <br>
+                  Av. 
+                  25 de Mayo</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>Saavedra y    Moreno&nbsp;</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>Mitre y <br>
+                  Tucumán</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>Economia<br>
+                  y    Negocios</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>Ayacucho<br>
+            y Matheu</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>UNSAM<br>
+                  Tornavía</strong></td>
+              </tr>
+              <tr>
+                <td align="center">7.30</td>
+                <td align="center">7.34</td>
+                <td align="center">7.35</td>
+                <td align="center">7.38</td>
+                <td align="center">7.40</td>
+                <td align="center">7.42</td>
+                <td align="center">7.45</td>
+                <td align="center">7.47</td>
+                <td align="center">7.50</td>
+                <td align="center">8.00</td>
+              </tr>
+              <tr>
+                <td align="center">8.10</td>
+                <td align="center">8.14</td>
+                <td align="center">8.15</td>
+                <td align="center">8.18</td>
+                <td align="center">8.20</td>
+                <td align="center">8.22</td>
+                <td align="center">8.25</td>
+                <td align="center">8.27</td>
+                <td align="center">8.30</td>
+                <td align="center">8.40</td>
+              </tr>
+              <tr>
+                <td align="center">9.10</td>
+                <td align="center">9.14</td>
+                <td align="center">9.15</td>
+                <td align="center">9.18</td>
+                <td align="center">9.20</td>
+                <td align="center">9.22</td>
+                <td align="center">9.25</td>
+                <td align="center">9.27</td>
+                <td align="center">9.30</td>
+                <td align="center">9.40</td>
+              </tr>
+              <tr>
+                <td align="center">11.10</td>
+                <td align="center">11.14</td>
+                <td align="center">11.15</td>
+                <td align="center">11.18</td>
+                <td align="center">11.20</td>
+                <td align="center">11.22</td>
+                <td align="center">11.25</td>
+                <td align="center">11.27</td>
+                <td align="center">11.30</td>
+                <td align="center">11.40</td>
+              </tr>
+              <tr>
+                <td align="center">12.00</td>
+                <td align="center">12.04</td>
+                <td align="center">12.05</td>
+                <td align="center">12.08</td>
+                <td align="center">12.10</td>
+                <td align="center">12.12</td>
+                <td align="center">12.15</td>
+                <td align="center">12.17</td>
+                <td align="center">12.20</td>
+                <td align="center">12.30</td>
+              </tr>
+              <tr>
+                <td align="center">12.40</td>
+                <td align="center">12.44</td>
+                <td align="center">12.45</td>
+                <td align="center">12.48</td>
+                <td align="center">12.50</td>
+                <td align="center">12.52</td>
+                <td align="center">12.55</td>
+                <td align="center">12.57</td>
+                <td align="center">13.00</td>
+                <td align="center">13.10</td>
+              </tr>
+
+              <tr>
+                <td colspan="10"><br>
+                  <h2>TURNO TARDE</h2></td>
+              </tr>
+              <tr>
+                <th align="center" bgcolor="#DFDFDF">SALIDA </th>
+                <th align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th align="center" bgcolor="#DFDFDF">LLEGADA</th>
+              </tr>
+              <tr>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>UNSAM    Tornavía</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>Sociales<br>
+                  M.         Asunta</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>Estación    Miguelete</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>Parque Yrigoyen</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>UNSAM <br>
+                  Av. 25 de Mayo</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>Saavedra y    Moreno&nbsp;</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>Mitre y Tucumán</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>Economia y    Negocios</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>Ayacucho y Matheu</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>UNSAM<br>
+                  Tornavía</strong></td>
+              </tr>
+              <tr>
+                <td align="center">16.10</td>
+                <td align="center">16.14</td>
+                <td align="center">16.15</td>
+                <td align="center">16.18</td>
+                <td align="center">16.20</td>
+                <td align="center">16.22</td>
+                <td align="center">16.25</td>
+                <td align="center">16.27</td>
+                <td align="center">16.30</td>
+                <td align="center">16.40</td>
+              </tr>
+              <tr>
+                <td align="center">17.10</td>
+                <td align="center">17.14</td>
+                <td align="center">17.15</td>
+                <td align="center">17.18</td>
+                <td align="center">17.20</td>
+                <td align="center">17.22</td>
+                <td align="center">17.25</td>
+                <td align="center">17.27</td>
+                <td align="center">17.30</td>
+                <td align="center">17.40</td>
+              </tr>
+              <tr>
+                <td align="center">18.10</td>
+                <td align="center">18.14</td>
+                <td align="center">18.15</td>
+                <td align="center">18.18</td>
+                <td align="center">18.20</td>
+                <td align="center">18.22</td>
+                <td align="center">18.25</td>
+                <td align="center">18.27</td>
+                <td align="center">18.30</td>
+                <td align="center">18.40</td>
+              </tr>
+              <tr>
+                <td align="center">19.10</td>
+                <td align="center">19.14</td>
+                <td align="center">19.15</td>
+                <td align="center">19.18</td>
+                <td align="center">19.20</td>
+                <td align="center">19.22</td>
+                <td align="center">19.25</td>
+                <td align="center">19.27</td>
+                <td align="center">19.30</td>
+                <td align="center">19.40</td>
+              </tr>
+              
+              <tr>
+                <td colspan="10"><br>
+                  <h2>TURNO NOCHE</h2></td>
+              </tr>
+              <tr>
+                <th align="center" bgcolor="#DFDFDF">SALIDA </th>
+                <th align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th align="center" bgcolor="#DFDFDF">LLEGADA</th>
+              </tr>
+              <tr>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>UNSAM    Tornavía&nbsp;</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>Sociales<br>
+                  M.         Asunta</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>Estación    Miguelete</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>Parque Yrigoyen</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>UNSAM<br>
+                  Av. 25 de Mayo</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>Saavedra y    Moreno&nbsp;</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>Mitre y Tucumán</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>Economia y    Negocios</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>Ayacucho y Matheu</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>UNSAM<br>
+                  Tornavía</strong></td>
+              </tr>
+              <tr>
+                <td align="center">20.10</td>
+                <td align="center">20.14</td>
+                <td align="center">20.15</td>
+                <td align="center">20.18</td>
+                <td align="center">20.20</td>
+                <td align="center">20.22</td>
+                <td align="center">20.25</td>
+                <td align="center">20.27</td>
+                <td align="center">20.30</td>
+                <td align="center">20.40</td>
+              </tr>
+              <tr>
+                <td align="center">20.55</td>
+                <td align="center">20.59</td>
+                <td align="center">21.00</td>
+                <td align="center">21.03</td>
+                <td align="center">21.05</td>
+                <td align="center">21.07</td>
+                <td align="center">21.10</td>
+                <td align="center">21.12</td>
+                <td align="center">21.15</td>
+                <td align="center">21.25</td>
+              </tr>
+              <tr>
+                <td align="center">21.30</td>
+                <td align="center">21.34</td>
+                <td align="center">21.35</td>
+                <td align="center">21.38</td>
+                <td align="center">21.40</td>
+                <td align="center">21.42</td>
+                <td align="center">21.45</td>
+                <td align="center">21.47</td>
+                <td align="center">21.50</td>
+                <td align="center">22.00</td>
+              </tr>
+               <tr>
+                <td align="center">22.15</td>
+                <td align="center">22.19</td>
+                <td align="center">22.20</td>
+                <td align="center">22.23</td>
+                <td align="center">22.25</td>
+                <td align="center">22.27</td>
+                <td align="center">22.30</td> 
+                <td align="center">22.32</td>
+                <td align="center">22.35</td>
+                <td align="center">22.45</td>
+              </tr>
+              
+              <tr>
+                <td colspan="10" align="left"><br>
+                  <br>
+                  <h1>SÁBADO</h1></td>
+              </tr>
+              <tr>
+                <td colspan="10"><h1> TURNO MAÑANA</h1></td>
+              </tr>
+              <tr>
+                <th align="center" bgcolor="#DFDFDF">SALIDA </th>
+                <th align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th align="center" bgcolor="#DFDFDF">&nbsp;</th>
+                <th align="center" bgcolor="#DFDFDF">LLEGADA</th>
+              </tr>
+              <tr>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>UNSAM    Tornavía</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>Sociales<br>
+                  M.         Asunta</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>Estación    Miguelete</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>Parque Yrigoyen</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>UNSAM<br>
+                  Av. 
+                  25 de Mayo</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>Saavedra y    Moreno&nbsp;</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>Mitre y<br>
+                  Tucumán</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>Economia<br>
+                  y    Negocios</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>Ayacucho<br>
+                  y Matheu</strong></td>
+                <td align="center" valign="top" bgcolor="#D3D3D3"><strong>UNSAM Tornavía    </strong></td>
+              </tr>
+              <tr>
+                <td align="center">8.10</td>
+                <td align="center">8.13</td>
+                <td align="center">8.15</td>
+                <td align="center">8.18</td>
+                <td align="center">8.20</td>
+                <td align="center">8.22</td>
+                <td align="center">8.25</td>
+                <td align="center">8.27</td>
+                <td align="center">8.30</td>
+                <td align="center">8.40</td>
+              </tr>
+              <tr>
+                <td align="center">9.10</td>
+                <td align="center">9.13</td>
+                <td align="center">9.15</td>
+                <td align="center">9.18</td>
+                <td align="center">9.20</td>
+                <td align="center">9.22</td>
+                <td align="center">9.25</td>
+                <td align="center">9.27</td>
+                <td align="center">9.30</td>
+                <td align="center">9.40</td>
+              </tr>
+              <tr>
+                <td align="center">11.10</td>
+                <td align="center">11.13</td>
+                <td align="center">11.15</td>
+                <td align="center">11.18</td>
+                <td align="center">11.20</td>
+                <td align="center">11.22</td>
+                <td align="center">11.25</td>
+                <td align="center">11.27</td>
+                <td align="center">11.30</td>
+                <td align="center">11.40</td>
+              </tr>
+               <tr>
+                <td align="center">12.10</td>
+                <td align="center">12.14</td>
+                <td align="center">12.15</td>
+                <td align="center">12.18</td>
+                <td align="center">12.20</td>
+                <td align="center">12.22</td>
+                <td align="center">12.25</td>
+                <td align="center">12.27</td>
+                <td align="center">12.30</td>
+                <td align="center">12.40</td>
+              </tr>
+              <tr>
+                <td align="center">13.00</td>
+                <td align="center">13.03</td>
+                <td align="center">13.05</td>
+                <td align="center">13.08</td>
+                <td align="center">13.10</td>
+                <td align="center">13.12</td>
+                <td align="center">13.15</td>
+                <td align="center">13.17</td>
+                <td align="center">13.20</td>
+                <td align="center">13.30</td>
+              </tr>
+                </tbody></table>
+          </div>
+        <div *ngIf="mostrarTrenHorario ==true ">
+          <button (click)="mostrarTrenHorario = false; mostrarInfoViajeros = true "> <- Volver</button>
+
+          <div id="contenido" style="border-left: 1px solid #2C88CD" class="color_oficial"> <!-- InstanceBeginEditable name="contenido" -->
+          <h1><strong>MINITREN Gratis<br>
+          </strong></h1>   
+         <!--  <img src="/home/img/tren.jpg" width="862" height="436" alt="foto del MiniTrén UNSAM" class="img100"> -->
+          <br>
+          <h1>Servicio del minitren UNSAM<br></h1>
+          <ul>
+          <li>Pasa de lunes a   viernes&nbsp;por   tres estaciones: 
+            Migueletes, próxima a la del tren Mitre; Sociales y   Tornavía.</li>
+          <li>La   frecuencia es de&nbsp;16   veces por día,&nbsp;aproximadamente   dos veces por hora, 
+            con&nbsp;un   receso entre las  13 y las 16. </li>
+          <li>La salida desde Miguelete suele   ser después de que llega la formación más próxima del tren Mitre, 
+          por lo que su   horario es más flexible. </li></ul>
+
+          <p>&nbsp;</p>
+
+          <strong>HORARIOS</strong>
+
+              <table cellpadding="5" cellspacing="2">
+                      <colgroup><col width="80" span="2">
+                      </colgroup><tbody><tr>
+                        <td bgcolor="#DFDFDF">Tornavías</td>
+                        <td bgcolor="#DFDFDF">Miguelete</td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#eeeeee">7:40</td>
+                        <td bgcolor="#eeeeee">7:50 *</td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#eeeeee">8:10</td>
+                        <td bgcolor="#eeeeee">8:20</td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#eeeeee">8:40</td>
+                        <td bgcolor="#eeeeee">8:50 *</td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#eeeeee">9:10</td>
+                        <td bgcolor="#eeeeee">9:20</td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#eeeeee">9:40</td>
+                        <td bgcolor="#eeeeee">9:50 *</td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#eeeeee" colspan="2">&nbsp;</td>
+                        
+                      </tr>
+                      <tr>
+                        <td bgcolor="#eeeeee">11:40</td>
+                        <td bgcolor="#eeeeee">11:50</td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#eeeeee">12:10</td>
+                        <td bgcolor="#eeeeee">12:20</td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#eeeeee">12:40</td>
+                        <td bgcolor="#eeeeee">12:50</td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#eeeeee">13:05</td>
+                        <td bgcolor="#eeeeee">13:15</td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#eeeeee" height="25"><img src="/home/img/barraHorarios.jpg" width="35" height="5"></td>
+                        <td bgcolor="#eeeeee" height="25"><img src="/home/img/barraHorarios.jpg" width="35" height="5"></td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#eeeeee" colspan="2">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#eeeeee">16:50</td>
+                        <td bgcolor="#eeeeee">17:00 *</td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#eeeeee">17:10</td>
+                        <td bgcolor="#eeeeee">17:20</td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#eeeeee">17:50</td>
+                        <td bgcolor="#eeeeee">18:00 *</td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#eeeeee">18:50</td>
+                        <td bgcolor="#eeeeee">19:00 *</td>
+                      </tr>
+                      
+                      <tr>
+                        <td bgcolor="#eeeeee" colspan="2">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#eeeeee">20:10</td>
+                        <td bgcolor="#eeeeee">20:20</td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#eeeeee">20:40</td>
+                        <td bgcolor="#eeeeee">20:50</td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#eeeeee">21:10</td>
+                        <td bgcolor="#eeeeee">21:20</td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#eeeeee">21:40</td>
+                        <td bgcolor="#eeeeee">21:50</td>
+                      </tr>
+                       <tr>
+                        <td bgcolor="#eeeeee" colspan="2" align="center"><strong>Fin De Recorrido</strong></td>
+                      </tr>
+          </tbody></table>
+          <blockquote>
+            <p>* Espera a que llegue el 1er tren del Ferrocarril Mitre</p>
+            <p>El Conductor cuenta con un libro de sugerencias, en caso de utilizarlo se ruega indicar un mail de contacto.</p>
+          </blockquote>
+        </div>
+
+</div>
+  </div>
+</div>

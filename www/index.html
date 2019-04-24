@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script src="cordova.js"></script>
+  <title>NgCordova</title>
+  <base href=".">
+
+  <meta http-equiv="Content-Security-Policy">
+
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  
+  <link href="assets/css/fontawesome-all.min.css" rel="stylesheet">
+
+<!-- Animación creditos -->
+<style>
+  #animation_container {
+  position:absolute;
+  margin:auto;
+  left:0;right:0;
+  top:0;bottom:0;
+  }
+</style>
+<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+<script src="creditos.js"></script>
+
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function BackKeyDown(e)
+  {
+    e.preventDefault();
+    document.removeEventListener("backbutton", BackKeyDown, true);
+    document.getElementById('body1').style.display = 'block';
+    document.getElementById('body2').style.display = 'none'; 
+  }
+function init() {
+  canvas = document.getElementById("canvas");
+  anim_container = document.getElementById("animation_container");
+  dom_overlay_container = document.getElementById("dom_overlay_container");
+  images = images||{};
+  ss = ss||{};
+  var loader = new createjs.LoadQueue(false);
+  loader.addEventListener("fileload", handleFileLoad);
+  loader.addEventListener("complete", handleComplete);
+  loader.loadManifest(lib.properties.manifest);
+}
+function handleFileLoad(evt) {  
+  if (evt.item.type == "image") { images[evt.item.id] = evt.result; } 
+}
+function handleComplete(evt) {
+  //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+  var queue = evt.target;
+  var ssMetadata = lib.ssMetadata;
+  for(i=0; i<ssMetadata.length; i++) {
+    ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+  }
+  exportRoot = new lib.creditos();
+  stage = new createjs.Stage(canvas);
+  stage.addChild(exportRoot); 
+  //Registers the "tick" event listener.
+  fnStartAnimation = function() {
+    createjs.Ticker.setFPS(lib.properties.fps);
+    createjs.Ticker.addEventListener("tick", stage);
+  }     
+  //Code to support hidpi screens and responsive scaling.
+  function makeResponsive(isResp, respDim, isScale, scaleType) {    
+    var lastW, lastH, lastS=1;    
+    // canvas.width = "100%";     
+    // canvas.height = "";
+    canvas.style.width = dom_overlay_container.style.width = anim_container.style.width =  "100vw";       
+    canvas.style.height = anim_container.style.height = dom_overlay_container.style.height = "100vh";
+    // stage.scaleX = pRatio*sRatio;      
+    // stage.scaleY = pRatio*sRatio;    
+    // window.addEventListener('resize', resizeCanvas);   
+    // resizeCanvas();    
+    function resizeCanvas() {     
+      var w = lib.properties.width, h = lib.properties.height;      
+      var iw = window.innerWidth, ih=window.innerHeight;      
+      var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1;    
+      if(isResp) {                
+        if((respDim=='width'&&lastW==iw) || (respDim=='height'&&lastH==ih)) {                    
+          sRatio = lastS;                
+        }       
+        else if(!isScale) {         
+          if(iw<w || ih<h)            
+            sRatio = Math.min(xRatio, yRatio);        
+        }       
+        else if(scaleType==1) {         
+          sRatio = Math.min(xRatio, yRatio);        
+        }       
+        else if(scaleType==2) {         
+          sRatio = Math.max(xRatio, yRatio);        
+        }     
+      }     
+      canvas.width = w*pRatio*sRatio;     
+      canvas.height = h*pRatio*sRatio;
+      canvas.style.width = dom_overlay_container.style.width = anim_container.style.width =  w*sRatio+'px';       
+      canvas.style.height = anim_container.style.height = dom_overlay_container.style.height = h*sRatio+'px';
+      stage.scaleX = pRatio*sRatio;     
+      stage.scaleY = pRatio*sRatio;     
+      lastW = iw; lastH = ih; lastS = sRatio;   
+    }
+  }
+  makeResponsive(true,'both',false,1);  
+  fnStartAnimation();
+}
+</script>
+<!-- Fin creditos -->
+</head>
+
+<body>
+  <div id="body1">
+    <app-root></app-root>
+  </div>
+  <div id="body2" style="display: none;">
+    <div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:100vw; height:100%">
+      <canvas id="canvas" width="600" height="900" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00); width: 100vw; height: 100%"></canvas>
+      <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:100vw; height:100%; position: absolute; left: 0px; top: 0px; display: block;">
+      </div>
+    </div>
+  </div>
+  <!-- <script type="text/javascript" src="cordova.js"></script> -->
+
+  <!-- <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script> -->
+    
+
+  <script>
+// Obtiene las notificaciones desde el Panel de control
+
+  document.addEventListener('deviceready', function(){
+    init(); // Iniciar la configuración de creditos
+  var FCMPlugin = window.FirebasePlugin;
+
+  tries = 100;
+  var interval = setInterval(function(){
+    if(--tries < 0){
+      clearInterval(interval);
+      console.log('Firebase Token could not be acquired!');
+      // document.getElementById('token').innerHTML = 'Firebase Token could not be acquired!';
+    }
+    FCMPlugin.getToken(function(token){
+      if(token !== null && token !== ''){
+      console.log('Firebase Token: '+token);
+        FCMPlugin.subscribe("all");
+        clearInterval(interval);
+      }
+    }, function(e){
+      console.log(JSON.stringify(e));
+      document.getElementById('token').innerHTML = JSON.stringify(e);
+    });
+  }, 100);
+
+  FCMPlugin.onNotificationOpen(function(data){
+    console.log(data);
+    // alert(JSON.stringify(data));
+    if(data.tap){
+      //Notification was received on device tray and tapped by the user.
+      alert(data.body);
+    }else{
+      //Notification was received in foreground. Maybe the user needs to be notified.
+      alert(data.body);
+    }
+  });
+}, false);
+  </script>
+
+<script>
+document.addEventListener('deviceready', function(){
+  var FCMPlugin = window.FirebasePlugin;
+    FCMPlugin.getToken(function(token){
+      if(token !== null && token !== ''){
+        var xhttp = new XMLHttpRequest();
+        var url = "http://grupoargentinoinformatico.com/server-xvi-sael-celes/api/v1/usuario/" + token;
+        xhttp.open("GET", url, true);
+        xhttp.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+        xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhttp.send(token);
+      }
+    }, function(e){
+      document.getElementById('token').innerHTML = JSON.stringify(e);
+    });
+  
+});    
+</script>
+
+<script type="text/javascript" src="inline.bundle.js"></script><script type="text/javascript" src="polyfills.bundle.js"></script><script type="text/javascript" src="styles.bundle.js"></script><script type="text/javascript" src="vendor.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
+</html>
+ 

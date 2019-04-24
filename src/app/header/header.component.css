@@ -1,0 +1,9 @@
+.navbar-brand {
+	width: 70%;
+	text-align: center;
+}
+
+.navbar-toggle {
+	float: left;
+	margin-left: 15px;
+}

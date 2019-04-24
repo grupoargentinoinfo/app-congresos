@@ -1,0 +1,74 @@
+<div class="pantallaBlanca">
+  <div class="headPantalla col-xs-12">
+    <div style="text-align: center;">Programa del Congreso</div>
+    <div class="search">
+        <!-- <i class="fa fa-search" aria-hidden="true"></i> -->
+        <span class="fa fa-search"></span>
+        <input type="text" [(ngModel)]="searchText" placeholder="Buscar.." id="buscador">
+    </div>
+  </div>
+
+  <div class="tabs-agenda" *ngIf="!charlaSeleccionada">
+    <ngb-tabset (tabChange)="searchText =null">
+      <ngb-tab *ngFor="let tab of tabs" title="{{tab.title}}"  >
+        <ng-template ngbTabContent>
+          <ul class="listadoTemas">
+            <li *ngFor="let tema of tab.tema" class="tema">
+              <div *ngIf="tieneCharlas(tema.charlas | filter:searchText)">
+                <div class="row">
+                <div class="col-xs-11" style="right: -15px;">
+                  <h2>{{tema.nombreTema}}</h2>
+                </div>
+                <div class="col-xs-1"></div>
+                </div>
+                <ul>
+                  <li *ngFor="let charla of tema.charlas | filter:searchText" class="item tema row favoritos">
+                    <div class="col-xs-8" style="right: -15px" (click)="charlaSeleccionada = charla; oradorSelecionado = charla.oradores">{{charla.tituloCharla}}
+                      <div class="espOradores">
+                      <ul *ngFor="let orador of charla.oradores">
+                        <li>{{orador.nombreOrador}}</li>
+                      </ul>
+                      </div>
+                      
+                    </div>
+
+                    <div class="horario col-xs-4" (click)="toggleAgendar(charla)">
+                      <div>
+                      <div>{{charla.horaCharla | date:'H:mm'}}hs-{{charla.horaFinCharla | date:'H:mm'}}hs</div>
+                      <div>
+                        <i [ngClass]="iconoFavorito(charla) ? 'fas fa-star' : 'far fa-star'" style="color: #E2AC0F;"></i>
+                      </div>
+                      </div>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        {{charla.lugar}}
+                      </div>
+                    </div>
+                    
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </ng-template>
+
+      </ngb-tab>
+
+
+    </ngb-tabset>
+  </div>
+</div>
+<!-- Charla seleccionada -->
+<div *ngIf="charlaSeleccionada">
+  <button (click)="charlaSeleccionada = null">
+    <- Volver</button>
+      <h3>{{charlaSeleccionada.tituloCharla}}</h3>
+      <ul *ngFor="let orador of oradorSelecionado">
+        <li><h5>{{orador.nombreOrador}}</h5></li>
+      </ul>
+      <span><h6>Horario: {{charlaSeleccionada.horaCharla | date:'H:mm'}} - {{charlaSeleccionada.horaFinCharla | date:'H:mm'}} hs</h6></span>
+      <span><h6>Lugar:   {{charlaSeleccionada.lugar}}</h6></span>
+      <p>{{charlaSeleccionada.resumenCharla}}</p>
+</div>
